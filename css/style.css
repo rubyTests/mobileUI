@@ -1,0 +1,466 @@
+/*comman style*/
+html *{
+	/*font-family: Roboto-medium ;*/
+}
+.anchorTag{
+	text-decoration: none;
+	color: white;
+}
+.anchorTag1{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  /*font-family: Roboto-Medium !important;*/
+  font-family: Roboto-Medium !important;
+}
+/*<-----------------------> Menu Style Start <-------------------------------->*/
+.menufont{
+	margin-left: 10px;
+}
+.menuHeader{
+  /*padding-bottom: 101px;*/
+  padding-bottom: 144px;
+  width: 100.6%;
+  background: url("http://sourcedigit.com/wp-content/uploads/2014/07/wallpaper_000.jpg") !important;
+  /*background: url("https://cdn.shutterstock.com/shutterstock/videos/650107/thumb/1.jpg") !important;*/
+  /*background-color: #DE0124 !important;*/
+  background-size: 100% 100% !important;
+  color: white !important;
+}
+.menuHeaderProfileimg {
+  border-radius: 50%;
+  float: left;
+  margin-left: 2px;
+  margin-right: 15px;
+  width: 48px;
+}
+.HeaderMenuProfileName{
+  color: white;
+  margin-bottom: 0px;
+  margin-top: 3px;
+  font-family: Roboto-Medium !important;
+  font-size: 21px !important; 
+}
+.HeaderMenuProfileNo {
+    color: white;
+    font-family: 'Helvetica','roboto-medium';
+    font-size: 18px;
+    margin-bottom: 0;
+    padding-top: 6px;
+}
+@media screen and (min-width:320px) and (max-width:399px){
+  .menuHeaderBorder{
+    border-top:1px solid white !important;
+    margin-top: 17px !important;
+    margin-bottom: 18px !important; 
+  }
+}
+@media screen and (min-width:400px) and (max-width: 900px){
+  .menuHeaderBorder{
+    border-top:1px solid white !important;
+    margin-top: 17px !important;
+    margin-bottom: 9px !important; 
+  }
+}
+.tab-title{
+  font-family: Roboto-Medium !important;
+}
+/*@media screen and (min-width:320px) and (max-width: 360px){
+.headFooterData1{
+  float: left;padding-top: 3px;height: 17px;width: 12px;margin-left: 10px;
+}
+.headFooterData2{
+  margin-bottom: 0px;color: white;font-size: 20px;font-family:'Helvetica','roboto-black';
+}
+} */
+.headFooterDataImg{
+  float: left;
+  height: 18px;
+  margin-left: 10px;
+  padding-top: 1px;
+  width: 15px;
+}
+.headFooterDataText1{
+  margin-bottom: 0px;color: white;font-size: 27px;font-family:'Helvetica','roboto-black';
+}
+.headFooterDataText2{
+  margin-left: 2px;color: white;font-size: 15px;font-family: 'Helvetica','roboto-black';padding-top: 7px;
+}
+.headfootdata{
+	border-top: 1px solid white;
+  color: white !important;
+  margin-left: -68px;
+  margin-top: 10px;
+  padding-left: 12px;
+  padding-top: 5px;
+  width: 266px;
+}
+.contentAdjust{
+  top: 149px !important;
+}
+.profiletext{
+	color: #FFFFFF !important
+}
+/*<--> Menu Tab Style Start <--->*/
+.bar-stable{
+	background-color: #DE0124 !important;
+}
+.headerborder{
+  background-color: #DE0124 !important;
+}
+.headerICons{
+  font-size: 27px;color: white;
+}
+.IconDiv{
+  cursor: pointer !important;
+}
+.headertitle {
+    color: white;
+    font-family: Roboto-Regular !important;
+    font-size: 18px;
+    margin-left: 13px;
+    padding-top: 6px;
+}
+.Togglebtn{
+	color: white!important;
+}
+.title{
+	color: white !important;
+}
+/*<--> Menu Tab Style End <--->*/
+	
+/*<-----------------------> Dashboard Style Start<-------------------------------->*/
+.slider-pager {
+  bottom: 20px;
+  height: 15px;
+  margin-bottom: -17px !important;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+.slider-pager-page{
+  font-size: 8px !important;
+}
+.slider-pager .slider-pager-page {
+  color: #000;
+  display: inline-block;
+  margin: 0 3px;
+  opacity: 0.3;
+  text-decoration: none;
+  width: 5px;
+}
+.slider {
+  overflow: hidden;
+  padding-bottom: 7px;
+  position: relative;
+  visibility: hidden;
+}
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  margin-top: 8px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  margin-bottom: 0px; 
+}
+.pageBackground{
+	background-color: #DDDDDD;
+}
+.profileDiv{
+  margin-bottom: 0px;
+  padding-top: 14px;padding-bottom: 14px;
+}
+.img-circle {
+  border-radius: 50%;
+  float: left;
+  margin-left: 9px;
+  margin-right: 15px;
+  width: 35px;
+}
+.Card-icon-Cont {
+    padding-top: 6px;
+    font-size: 12px !important;
+    font-family: roboto-light !important;
+    color: #242424 !important;
+}
+.ProfileName{
+  margin-bottom: 0px;
+  font-family: Roboto-Medium !important;
+  font-size: 16px !important; 
+}
+.ProfileText {
+    color: #797c80;
+    font-family: roboto-medium;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.ProfileBorder{
+  border-top: 1px solid #F0F0F0;width: 97%;margin-bottom: 0px;margin-top: 0px
+}
+.ProfileHead{
+  margin-bottom: 19px;
+  margin-top: 4px;
+}
+.ProfileSubLeft{
+  float: left; margin-left: 2px;font-size: 11px;font-family: Roboto-Medium !important;
+}
+.ProfileSubRight{
+  float: right; margin-right: 2px;font-size: 11px;
+}
+.QuickCircleTable{
+  width: 100%;margin-bottom: -5px
+}
+.circleBase {
+  border-radius: 50%;
+}
+.CirculeinnerText {
+  border: 1px solid #797c80;
+  font-size: 11px;
+  height: 39px;
+  padding-top: 9px;
+  text-align: center;
+  width: 40px;
+}
+.circleTD{
+  width: 25%;
+}
+.CirculeTitle{
+  font-size: 9px;
+}
+.TableBottomBorder {
+  border-top: 1px solid #f6f2eb;
+  width: 97%;
+}
+.FooterOption{
+/*  margin-top: -6px;margin-bottom: 21px !important;
+*/  /*margin-top: 1px; margin-bottom: 20px; padding-bottom: 11px; padding-top: 0px; border-bottom-width: 1px;*/
+border-top: 1px solid #f5f5f5 ;
+}
+.FooterLeft{
+  /*float: left; margin-left: 8px;font-size: 12px;*/
+  float: left;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-left: 14px;
+  margin-top: 10px;
+}
+.FooterRight{
+  /*float: right; margin-right: 3px;font-size: 12px;*/
+  float: right;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-right: 14px !important;
+  margin-top: 10px;
+}
+.CardfooterText{
+	float: right;
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-right: 14px !important;
+  margin-top: 10px;
+}
+
+.QucikCartHeader{
+	margin-left: 13px; 
+  margin-top: 12px;
+  margin-bottom:12px;
+  font-family: Roboto-Black !important;
+  font-size: 18px;
+}
+.QucikMenuTable{
+	width: 100%
+}
+.TableTD-Head{
+	border: 1px solid #f5f5f5; text-align: center; padding-top: 15px;padding-bottom: 15px; width: 33%;
+}
+.TableTD-Foot{
+	border: 1px solid #f5f5f5; text-align: center; padding-top: 15px;padding-bottom: 23px !important; border-bottom: none;width: 33%;
+}
+.QucikMenuImg{
+	width: 30px;
+	height: 30px;
+  margin-top: 1px;
+  margin-bottom: 4px;
+}
+.QucikMenuTitle{
+	font-size: 14px;
+}
+.Card-icon-Title{
+  /*font-size: 20px !important;
+  font-family: roboto-medium !important;
+  font-family: roboto !important;
+  /*color: black !important;*/
+  color: #474747 !important;
+  font-family: Roboto-Thin !important;
+  font-size: 19px !important;
+  font-weight: bold;
+}
+/*.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {*/
+  .newavatar > img:first-child, .newavatar .item-image, .newavatar .item-content > img:first-child, .newavatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
+    /*border-radius: 50%;
+    height: 100%;
+    left: 16px;
+    max-height: 44px;
+    max-width: 44px;
+    position: absolute;
+    top: 16px;
+    width: 100%;*/
+    border-radius: 50%;
+    height: 100%;
+    left: 16px;
+    max-height: 52px !important;
+    max-width: 52px !important;
+    position: absolute;
+    top: 16px;
+    width: 100%;
+}
+.newavatar, .newavatar .item-content, .item-avatar-left, .item-avatar-left .item-content {
+    /*min-height: 72px;
+    padding-left: 72px;
+    padding-top: 20px;
+    padding-bottom:  20px;
+    border-bottom:1px solid #f6f2eb !important;*/
+    border-bottom: 1px solid #f6f2eb !important;
+    min-height: 80px;
+    padding-bottom: 25px;
+    padding-left: 80px !important;
+    padding-top: 25px;
+}
+.Cardimage{
+  margin-top: 5px !important;
+}
+
+/*<-----------------------> Dashboard Style End<-------------------------------->*/
+
+/*<-----------------------> Side Menu Style Start<-------------------------------->*/
+/*.sideMenuWidth {
+    width: 547px !important;
+}*/
+
+.card-custom{
+    width: 235px;
+    box-shadow: none;
+    text-align: center;
+}
+.FQAiconName{
+  color: black !important;
+  font-family: Roboto-Medium !important;
+  font-size: 12px !important;
+  padding-top: 10px;
+  text-align: left;
+}
+.img-circle-FQA {
+  float: left;
+  margin-right: 16px;
+  width: 35px;
+}
+/*Setting*/
+.SettingsHeadone{
+  padding-bottom: 13px;
+  font-family: Roboto-Black;
+}
+.SettingsHeadone1{
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: Roboto-Black;
+}
+.img-circle-Settings {
+  float: left;
+  /*border-radius: 50px;*/
+  margin-right: 16px;
+  width: 40px;
+}
+.SettingHeadName{
+  color: black !important;
+  font-family: Roboto-Medium !important;
+  font-size: 14px !important;
+  padding-top: 4px;
+  text-align: left;
+}
+.SettingContentName{
+  font-size: 11px !important;
+  margin-top: -6px;
+}
+.img-circle-About{
+  float: left;
+  /*border-radius: 50px;*/
+  margin-right: 16px;
+  width: 35px;
+}
+.AbouticonName{
+  font-size: 15px !important;
+  padding-top: 9px;
+  text-align: left;
+}
+@media screen and (max-width: 360px) and (min-width: 320px) {
+  .tab-item {
+    max-width: 160px !important;
+  }   
+}
+/*<-----------------------> Side Menu Style End<-------------------------------->*/
+/*ion-side-menu.sideMenuWidth {
+    width: 270px !important;
+}*/
+@media screen and (min-width: 320px) and (max-width: 360px) {
+  ion-side-menu.sideMenuWidth {
+    width: 270px !important;
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 500px) {
+  ion-side-menu.sideMenuWidth {
+    width: 359px !important;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+  ion-side-menu.sideMenuWidth {
+    width: 550px !important;
+  }
+}
+/*@media screen and (min-width: 760px) and (min-width: 800px) {
+   ion-side-menu.sideMenuWidth {
+    width: 750px !important;
+  }
+}*/
+  .labelClass{
+    color: #3399FF;
+    font-size: 12px;
+  }
+  .inputClass{
+    font-size: 14px !important;
+    height: 20px !important;
+  }
+  input.inputClass::-moz-placeholder, textarea::-moz-placeholder {
+    color: black;
+}
+  .btnclass{
+    border-radius: 0px
+  }
+/*-------------Qucick menu Tab---------------------*/
+  .styleClass{
+    font-size: 35px;
+  }
+  .textcolor{
+    color: #387EF5 !important; 
+  }
+  .DefaultColorClass{
+    color: #7C7C7C;
+  }
+  .Table-bardered{
+    border-top: none;
+  }
+
+  fader {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  opacity: 0;
+  z-index: -1; 
+/*  display: block;
+  position: fixed;
+  top:44px;
+  width: 270px;
+  height: 100%;
+  z-index: 100;*/
+}

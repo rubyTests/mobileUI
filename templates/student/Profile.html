@@ -1,0 +1,25 @@
+<ion-header-bar class="headerborder" >
+  <div class="IconDiv" ng-click="goback();">
+    <i class="ion ion-arrow-left-c back-icon headerICons"></i>
+  </div>
+  <div class="">
+    <h3  class="headertitle">Profile</h3>
+  </div>
+</ion-header-bar>
+<ion-content>
+</ion-content>
+<ion-view class="pageBackground"> 
+<ion-tabs slide-tabs-scrollable="true" class="tabs-striped tabs-top tabs-custom tabs-background-stable tabs-color-dark" drawer-close>
+    <ion-tab  class="bg" title="ABOUT" ui-sref="Profile.about">
+      <ion-nav-view name="about"></ion-nav-view>
+    </ion-tab>
+    <ion-tab  class="bg"  title="PARENT DETAILS" ui-sref="Profile.ParentGurdianDetails">
+      <ion-nav-view name="paGaDetails"></ion-nav-view>
+    </ion-tab>
+    <ion-tab  class="bg"  title="ADDITIONAL DETAILS" ui-sref="Profile.AdditionalDetails">
+      <ion-nav-view name="additiDetails"></ion-nav-view>
+    </ion-tab>
+</ion-tabs> 
+</ion-view>
+
+

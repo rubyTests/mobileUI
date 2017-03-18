@@ -1,0 +1,214 @@
+<!-- <ion-header-bar class="headerborder" >
+	<div class="IconDiv" ng-click="goback();">
+		<i class="ion ion-arrow-left-c back-icon headerICons"></i>
+    </div>
+    <div class="">
+		<h3  class="headertitle">Pay Bill</h3>
+	</div>
+</ion-header-bar>
+<ion-view class="pageBackground">
+	<style type="text/css">
+		.new {
+		    border: medium none;
+		}
+		.tab-nav{
+		  border: medium none;
+		}
+		.tab-item {
+		  border: 1px solid #DDDDDD;
+		}
+		.tab-item.tab-item-active {
+		    color: #387EF5;
+		}
+	</style>
+	<ion-content ></ion-content>
+	  <ion-tabs class="tabs-icon-top tabs-top ">
+	    <ion-tab title="Mobile" icon="ion-ipad" href="#/PayBill-mobile"  ui-sref="PayBill.mobile">
+	        <ion-nav-view name="mobile-tab"></ion-nav-view>
+	    </ion-tab>
+	    <ion-tab title="landline" icon="ion-ios-telephone" href="#/PayBill-landline" ui-sref="PayBill.landline">
+	        <ion-nav-view name="landline-tab"></ion-nav-view>
+	    </ion-tab>
+	    <ion-tab title="Datacard" icon="ion-card" href="#/PayBill-datacard" ui-sref="PayBill.datacard">
+	        <ion-nav-view name="datacard-tab"></ion-nav-view>
+	    </ion-tab>
+	  </ion-tabs>
+</ion-view> -->
+
+<ion-header-bar class="headerborder" >
+	<div class="IconDiv" ng-click="goback();">
+		<i class="ion ion-arrow-left-c back-icon headerICons"></i>
+    </div>
+    <div class="">
+		<h3  class="headertitle">Home</h3>
+	</div>
+</ion-header-bar>
+<ion-view class="pageBackground">
+<ion-content>
+<div class="card">
+	<table class="QucikMenuTable">
+	<tbody style="border-bottom: 1px solid #DDDDDD;">
+  		<tr>
+  			<td class="TableTD-Head anchorTag1 Table-bardered" ng-click="paybillMobile()">
+  				<a class="anchorTag1">
+	  				<i class="ion-ipad styleClass DefaultColorClass" ng-class="{textcolor : PaybillMobile}"></i>
+	  				<p class="QucikMenuTitle DefaultColorClass" ng-class="{textcolor : PaybillMobile}">Mobile</p>
+  				</a>
+  			</td>
+  			<td class="TableTD-Head anchorTag1 Table-bardered" ng-click="paybillLandline()">
+	  			<a class="anchorTag1">
+	  				<i class="ion-ios-telephone styleClass DefaultColorClass" ng-class="{textcolor : PaybillLandline}"></i>
+	  				<p class="QucikMenuTitle DefaultColorClass" ng-class="{textcolor : PaybillLandline}">Landline</p>
+  				</a>
+  			</td>
+  			<td class="TableTD-Head anchorTag1 Table-bardered" ng-click="paybillDataCard()">
+  				<a class="anchorTag1">
+	  				<i class="ion-card styleClass DefaultColorClass" ng-class="{textcolor : PaybillDataCard}"></i>
+	  				<p class="QucikMenuTitle DefaultColorClass" ng-class="{textcolor : PaybillDataCard}">Data Card</p>
+  				</a>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td class="TableTD-Foot anchorTag1" ng-click="paybillElectricity()">
+  				<a class="anchorTag1">
+  					<i class="ion-power styleClass DefaultColorClass" ng-class="{textcolor : PaybillElectricity}"></i>
+  					<p class="QucikMenuTitle DefaultColorClass" ng-class="{textcolor : PaybillElectricity}">Electricity</p>
+  				</a>
+  			</td>
+  			</a>
+  			<td class="TableTD-Foot anchorTag1" ng-click="paybillInsurance()">
+  				<a class="anchorTag1">
+  					<i class="ion-ios-list styleClass DefaultColorClass" ng-class="{textcolor : PaybillInsurance}"></i>
+  					<p class="QucikMenuTitle DefaultColorClass" ng-class="{textcolor : PaybillInsurance}">Insurance</p>
+  				</a>
+  			</td>
+  			<td class="TableTD-Foot anchorTag1" ng-click="paybillGas()">
+  				<a class="anchorTag1">
+  					<i class="ion-android-globe styleClass DefaultColorClass" ng-class="{textcolor : PaybillGas}"></i>
+  					<p class="QucikMenuTitle DefaultColorClass" ng-class="{textcolor : PaybillGas}">Gas</p>
+  				</a>
+  			</td>
+  		</tr>
+	</tbody>
+	</table>
+	<div ng-if="PaybillMobile" >
+		<div class="list">
+		  <label class="item item-input item-floating-label">
+		    <span class="input-label labelClass">Enter Phone Number</span>
+		    <input type="text" class="inputClass" placeholder="Enter Phone Number">
+		  </label>
+		  <label class="item item-input item-select">
+		    <div class="input-label">Select Operater</div>
+		    <select>
+		      <option>Aircel</option>
+		      <option selected>Airtel</option>
+		      <option>Idea</option>
+		    </select>
+		  </label>
+		  <label class="item">
+			 	<center><button class="button button-small button-positive btnclass">Pay Now</button></center>
+		 	</label>
+		</div>
+	</div>
+	<div ng-if="PaybillLandline" >
+		<div class="list">
+	    <label class="item item-input item-floating-label">
+	      <span class="input-label labelClass">Enter Phone Number</span>
+	      <input type="text" class="inputClass" placeholder="Enter Phone Number">
+	    </label>
+	    <label class="item item-input item-select">
+	      <div class="input-label">Select Operater</div>
+	      <select>
+	        <option>Aircel</option>
+	        <option selected>Airtel</option>
+	        <option>Idea</option>
+	      </select>
+	    </label>
+	    <label class="item">
+	   <center> 
+	   <button class="button button-small button-positive btnclass">Pay Now</button>
+	   </center>
+	   </label>
+  	</div>
+	</div>
+	<div ng-if="PaybillDataCard">
+		<div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label labelClass">Enter Number</span>
+        <input type="text" class="inputClass" placeholder="Enter Number">
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">Select Operater</div>
+        <select>
+          <option>Aircel</option>
+          <option selected>Airtel</option>
+          <option>Idea</option>
+        </select>
+      </label>
+      <label class="item">
+     <center> 
+     <button class="button button-small button-positive btnclass">Pay Now</button>
+     </center>
+     </label>
+  	</div>
+	</div>
+	<div ng-if="PaybillElectricity">
+		<div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">Select Operater</div>
+        <select>
+          <option>Aircel</option>
+          <option selected>Airtel</option>
+          <option>Idea</option>
+        </select>
+      </label>
+      <label class="item">
+		     <center> 
+		     <button class="button button-small button-positive btnclass">Pay Now</button>
+		     </center>
+     	</label>
+  	</div>
+	</div>
+	<div ng-if="PaybillInsurance">
+		<div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">Select Operater</div>
+        <select>
+          <option>Aircel</option>
+          <option selected>Airtel</option>
+          <option>Idea</option>
+        </select>
+      </label>
+      <label class="item">
+		     <center> 
+		     <button class="button button-small button-positive btnclass">Pay Now</button>
+		     </center>
+     	</label>
+  	</div>
+	</div>
+	<div ng-if="PaybillGas">
+		<div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">Select Operater</div>
+        <select>
+          <option>Aircel</option>
+          <option selected>Airtel</option>
+          <option>Idea</option>
+        </select>
+      </label>
+      <label class="item">
+		     <center> 
+		     <button class="button button-small button-positive btnclass">Pay Now</button>
+		     </center>
+     	</label>
+  	</div>
+	</div>
+</ion-content>
+</ion-view>
+
+
+
+
+
+
+
