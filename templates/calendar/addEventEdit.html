@@ -1,0 +1,136 @@
+<ion-view view-title="Events" name="select-view">
+<head>
+	<link href="lib/ion-datetime-picker/release/ion-datetime-picker.min.css" rel="stylesheet">
+</head>
+<style>
+	.item {
+    border-width: 0 0 1px;
+	
+}
+/*.font{
+    font-size:16px!important;
+}*/
+/*p {
+    margin: 7px 0px 10px;
+}
+.toggle .handle {
+    height: 17px;
+    width: 18px;
+}
+.toggle .track {
+    height: 21px;
+    width: 34px;
+}*/
+/*.toggle input:checked + .track .handle {
+    background-color: #fff;
+    transform: translate3d(14px, 0px, 0px);
+}*/
+.card .item, .list-inset .item, .padding > .list .item, .padding-horizontal > .list .item {
+    margin-left: -11px;
+    margin-right: 0;
+}
+.bar-stable .button {
+    background-color: rgb(222,1,36);
+    border-color: rgb(222,1,36);
+    color: white;
+}
+/*.btnstyle {
+    border-radius: 44px;
+    height: 6px !important;
+    width: 1px;
+}*/
+/*.button {
+    border-width: 1px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 42px;
+    min-height: 15px;
+    min-width: 4px;
+    padding: 0 7px;
+}
+.button .icon::before, .button.icon-left::before, .button.icon-right::before, .button.icon::before {
+    display: inline-block;
+    font-size: 11px;
+    line-height: 14px;
+    margin-left: -12px;
+    pointer-events: none;
+    vertical-align: inherit;
+}*/
+</style>
+<!-- <div class="bar bar-header">
+		<button ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item"><i class="icon ion-ios-arrow-back" style="color:;"></i> 
+			<span class="back-text"><span class="default-title"></span><span class="previous-title hide">February 2017</span></span>
+		</button>
+        <div class = "row">
+		<div class = "col">
+		<h1 class="title" style="margin-left: -153px;">Create Event</h1>
+		</div>
+		<div class = "col">
+			<h1 class="title" style="margin-left:147px!important;color:green;">Save</h1>
+		</div>
+		<div class = "col">
+			<h1 class="title" style=" text-align: right!important;color:red;">Cancel</h1>
+		</div>
+	</div>
+  
+</div> -->
+    <ion-header-bar class="bar-stable">
+	    <div ng-click="goback();" class="IconDiv">
+		    <i class="ion ion-arrow-left-c back-icon headerICons" style="margin-top: 3px;"></i>
+		</div>
+		<h1 class="title"> Events</h1>
+		<div style="margin-left: 79%;">
+			<button type="button" ng-submit="saveEvent()" class="button btn-small button-primary" style="">Save</button>
+		</div>
+
+		
+    </ion-header-bar>
+    <ion-content>
+	<ion-list>
+	<div ng-app="demo">
+       
+		<div class="list list-inset">
+		    <form  name="myForm"><p></p>
+			  <label class="item item-input">
+				<i class="icon ion-person" style="margin-left: 0px;"></i> &nbsp;&nbsp;
+				<input  type="text"  value="Environment day">
+			  </label><br>
+			  <label class="item item-input">
+			  	<i class="icon ion-compose" style="margin-top: -10px;"></i> &nbsp;&nbsp;
+				<textarea>Environment day is celebrated with a special message and theme to keep the environment clean and green.</textarea>
+			  </label>
+			<div class = "row item " style="border-width: 1px 0 0 11px;padding-left: 1px;">
+			
+				<div class = "item" style="margin-bottom: -5px;">
+					<i class="icon ion-calendar" style="margin-top: -10px;"></i> &nbsp;&nbsp;
+					<span style="margin-left:-6px;">Start</span>
+					<strong style="font-size:12px;margin-left:5px;">{{'25/03/2017'}} &nbsp;{{'5:00 pm'}}</strong>
+				</div>
+			</div>
+			<div class = "item" style="border-width: 1px 0 0 11px;padding-left: 1px;">
+				<div class = "item">
+					<i class="icon ion-calendar" style="margin-top: -10px;"></i> &nbsp;&nbsp;
+					<span style="margin-left:-6px;">End</span>
+					<strong style="font-size:12px;margin-left:5px;">{{'25/03/2017'}} &nbsp;{{'6:00 pm'}}</strong>
+				</div>
+			</div>
+          <!--   <label class="item item-input">
+				<div class = "row">
+					<div class = "col col-80">
+						<i class="icon ion-location" style="margin-left: -9px;"></i> &nbsp;&nbsp;
+						<span class="font">Location</span>
+					</div>
+					<div class = "col">
+						<span style="margin-left: 9px; color:green;">Map</span>
+					</div>
+				</div>
+			</label>  -->
+			<!-- <div>
+				<button type="button" ng-click="saveEvent()" class="button btn-small button-primary" style="">Save</button>
+			</div> -->
+		</form>
+		</div>
+		</div>
+	</ion-list>
+    </ion-content>
+</ion-view>

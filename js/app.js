@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer','tabSlideBox'])
+angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer','tabSlideBox','ui.rCalendar','ion-datetime-picker'])
 
   .run(function($ionicPlatform,$rootScope,$location,$state,$timeout,$interval) {
     // .run(function($ionicPlatform) {
@@ -180,6 +180,43 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
         controller: 'HsaCtrl'
       }
     }
+  })
+
+  // Gnanamani @21.03.2017 
+  .state('Message', {
+    url: "/Message",
+    templateUrl: "templates/message/messageView.html",
+    controller: 'HsaCtrl'
+  })
+  .state('NewMessage',{
+    url:'/NewMessage',
+    templateUrl: "templates/message/newMessage.html",
+    controller: 'HsaCtrl'
+  })
+  .state('Calendar',{
+    url:'/Calendar',
+    templateUrl: "templates/calendar/calendar.html",
+    controller: 'CalendarDemoCtrl'
+  })
+  .state('AddEvent',{
+    url:'/AddEvent',
+    templateUrl: "templates/calendar/addEvent.html",
+    controller: 'CalendarDemoCtrl'
+  })
+  .state('AddEventEdit',{
+    url:'/AddEventEdit',
+    templateUrl: "templates/calendar/addEventEdit.html",
+    controller: 'CalendarDemoCtrl'
+  })
+  .state('ViewEvents',{
+    url:'/ViewEvents',
+    templateUrl: "templates/calendar/viewEvents.html",
+    controller: 'CalendarDemoCtrl'
+  })
+  .state('AttdncPerctgView',{
+    url:'/AttdncPerctgView',
+    templateUrl: "templates/attendance/attdancPerctgView.html"
+    //controller: 'CalendarDemoCtrl'
   })
   ;
 $urlRouterProvider.otherwise('/app/hsa');  

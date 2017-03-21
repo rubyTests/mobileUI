@@ -1,0 +1,91 @@
+<ion-view>
+	<head>
+		<!-- <link rel="stylesheet" href="http://code.ionicframework.com/1.1.1/css/ionic.min.css"/> -->
+		<link rel="stylesheet" href="lib/ionic-calendar/dist/css/calendar.css"/>
+		<link rel="stylesheet" href="lib/ionic-calendar/dist/css/calendar.min.css"/>
+		<!-- <script src="http://code.ionicframework.com/1.1.1/js/ionic.bundle.min.js"></script> -->
+		<script src="lib/ionic-calendar/dist/js/calendar-tpls.min.js"></script>
+	</head>
+	
+	<ion-header-bar class="bar-stable bar bar-header" align-title="left">
+				<div class="home-head2" ng-click="goback();">
+					<i class="ion ion-arrow-left-c back-icon headerICons" style="margin-top: 3px;"></i>
+			    </div>
+			    <h1 class="title">{{viewTitle}}</h1>
+			    <div class="buttons buttons-right header-item">
+				   	<span class="right-buttons">
+						<button ng-click="today()" ng-disabled="isToday()" class="button" disabled="disabled">Today</button>
+						<button ng-click="changeMode('month')" class="button">M</button>
+						<button ng-click="changeMode('week')" class="button">W</button>
+						<button ng-click="changeMode('day')" class="button">D</button>
+						<!-- <button ng-click="loadEvents()" class="button">Load Events</button> -->
+					</span>
+			    </div>
+		</ion-header-bar>
+	
+	<style>
+		.bar-footer {
+		    border-bottom-width: 0;
+		    border-top-width: 0;
+		}
+		.bar-stable .button {
+		    background-color: rgb(222,1,36);
+		    border-color: rgb(222,1,36);
+		    color: white;
+		}
+		.testCss{
+			margin-top: -21px !important;
+		}
+		.cardhead{
+		    color: green!important;
+		    padding-bottom: 6px!important;
+		    padding-top: 6px!important;
+		}
+		.bodyhgt {
+		    height: 81px!important;
+		    padding: 13px!important;
+		}
+		.contnt {
+		    margin-bottom: -14px!important;
+		    margin-top: 16px!important;
+		}
+    </style>
+    <ion-content scroll="false" class="main-content" ng-init="init()">
+		<calendar ng-model="calendar.currentDate" calendar-mode="calendar.mode" event-source="calendar.eventSource"
+		  range-changed="reloadSource(startTime, endTime)"
+		  event-selected="onEventSelected(event)" title-changed="onViewTitleChanged(title)"
+		  time-selected="onTimeSelected(selectedTime, events, disabled)" step="30">
+	    </calendar>
+		<ion-list>
+			<div class="">
+			    <a  menu-close ui-sref="AddEvent">
+					<img src="img/Add_Filled-100.png" style="float:right;margin-right: 0px;margin-right: 17px;margin-top: -66px;width: 55px;">
+				</a>
+			</div>
+		</ion-list>	  
+    </ion-content>
+    <!-- <div class="list card">
+	    <h2>Marty McFly</h2>
+	    <p>November 05, 1955</p>
+	  	<div class="item item-body">
+		    <p>
+		      <a href="#" class="subdued">1 Like</a>
+		      <a href="#" class="subdued">5 Comments</a>
+		    </p>
+	    </div>
+	</div>
+	  -->
+		
+</ion-view>
+
+ <!-- <div class="bar bar-footer" style=" height: 63px; border: solid white 0px 0px 0px 0px !important;padding: 0px 0px 0px 0px !important;">
+	  <div class="title"  style="border: solid white 0px !important;">
+	    <a  menu-close ui-sref="AddEvent">
+		<img src="img/Add_Filled-100.png" style="width: 46px;float:right;margin-right: 13px;">
+		</a>
+	  </div>
+	</div> -->
+
+<!-- <div ui-calendar="uiConfig.calendar" ng-model="eventSources"> -->
+
+
