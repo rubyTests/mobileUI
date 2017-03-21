@@ -17,6 +17,10 @@ angular.module('starter.controllers', ['ionic','tabSlideBox'])
     $scope.isWalletShown = $scope.isWalletShown === false ? true : false;
     console.log('Toggled');
   }
+  // $scope.toggleLeftSideMenu = function() {
+  //   alert('in');
+  //   $ionicSideMenuDelegate.toggleLeft();
+  // };
 })
 
 .controller('HsaCtrl', function($scope,$ionicTabsDelegate) {
@@ -35,6 +39,12 @@ angular.module('starter.controllers', ['ionic','tabSlideBox'])
   $scope.goback=function(){
     // window.history.back();
     window.location.href = "../www/index.html#/app/hsa";
+  }
+  $scope.goAbout=function(){
+    window.location.href = "../www/index.html#/Profile/about";
+  }
+  $scope.goAdditional=function(){
+   window.location.href = "../www/index.html#/Profile/AdditionalDetails";
   }
   ///hide and show qucik menu//
     $scope.PaybillMobile=true;
@@ -97,7 +107,7 @@ angular.module('starter.controllers', ['ionic','tabSlideBox'])
 })
 .controller('FsaCtrl', function($scope,$ionicTabsDelegate) {
   $scope.goBack = function () {
-    alert('fsa goback');
+    //alert('fsa goback');
     var selected = $ionicTabsDelegate.selectedIndex();
     if (selected != -1 && selected != 0) {
       $ionicTabsDelegate.select(selected - 1);

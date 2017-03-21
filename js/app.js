@@ -24,7 +24,8 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
 })
 // .controller('MainCtrl', function($scope, $window, $ionicSideMenuDelegate) {
 // })
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
   $stateProvider
   .state('app', {
     url: '/app',
@@ -106,11 +107,20 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
     templateUrl: "templates/addMoney.html",
     controller: 'HsaCtrl'
   })
-  // ruby campus profile //
+  // ruby campus start here profile //
   .state('Profile', {
     url: "/Profile",
     templateUrl: "templates/student/Profile.html",
     controller: 'HsaCtrl'
+  })
+
+.state('Profile.Test',{
+    url: "/Test",
+    view:{
+      'test':{
+      templateUrl: "templates/student/test.html"
+      }
+    }
   })
   .state('profileNew',{
     url:"/profile New",
@@ -126,12 +136,39 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
       }
     }
   })
-  .state('Profile.ParentGurdianDetails',{
-    url:'/ParentGurdianDetails',
-    views :{
-      'paGaDetails':{
-        templateUrl: "templates/student/ParentDetail.html",
-        controller: 'HsaCtrl'
+  .state('Profile.Parents', {
+        url: '/parents',
+        views: {
+            'parents-details': {
+              templateUrl: 'templates/student/ParentDetail.html',
+              controller:'HsaCtrl'
+            }
+        }
+    })
+  .state('Profile.Parents.FatherDetails',{
+    url:'/FatherDetails',
+    views:{
+      'Father-Details':{
+        templateUrl :'templates/student/FatherDetails.html',
+        controller:'HsaCtrl'
+      }
+    }
+  })
+  .state('Profile.Parents.MotherDetails',{
+    url:'/MotherDetails',
+    views:{
+      'Mother-Details':{
+        templateUrl :'templates/student/MotherDetails.html',
+        controller:'HsaCtrl'
+      }
+    }
+  })
+  .state('Profile.Parents.GaurdianDetails',{
+    url:'/GaurdianDetails',
+    views:{
+      'Gaurdian-Details':{
+        templateUrl :'templates/student/GaurdianDetails.html',
+        controller:'HsaCtrl'
       }
     }
   })
