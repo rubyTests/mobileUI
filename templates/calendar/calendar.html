@@ -6,18 +6,30 @@
 		<!-- <script src="http://code.ionicframework.com/1.1.1/js/ionic.bundle.min.js"></script> -->
 		<script src="lib/ionic-calendar/dist/js/calendar-tpls.min.js"></script>
 	</head>
+	<style>
+	.buttonhr {
+		  background:none;
+		  border:none;
+		  color:#FFF;
+		  font-family:Verdana, Geneva, sans-serif;
+		  cursor:pointer;
+		}
+		.bar .title {
+		    font-size: 15px;
+		}
+	</style>
 	
 	<ion-header-bar class="bar-stable bar bar-header" align-title="left">
 				<div class="home-head2" ng-click="goback();">
-					<i class="ion ion-arrow-left-c back-icon headerICons" style="margin-top: 3px;"></i>
+					<i class="ion ion-arrow-left-c back-icon headerICons" style="margin-top: 3px;margin-left: 4px;"></i>
 			    </div>
-			    <h1 class="title">{{viewTitle}}</h1>
+			    <h3 class="title">{{viewTitle}}</h3>
 			    <div class="buttons buttons-right header-item">
 				   	<span class="right-buttons">
-						<button ng-click="today()" ng-disabled="isToday()" class="button" disabled="disabled">Today</button>
-						<button ng-click="changeMode('month')" class="button">M</button>
-						<button ng-click="changeMode('week')" class="button">W</button>
-						<button ng-click="changeMode('day')" class="button">D</button>
+						<button ng-click="today()" ng-disabled="isToday()" class="buttonhr" disabled="disabled">Today</button>
+						<button ng-click="changeMode('month')" class="buttonhr">M</button>
+						<button ng-click="changeMode('week')" class="buttonhr">W</button>
+						<button ng-click="changeMode('day')" class="buttonhr">D</button>
 						<!-- <button ng-click="loadEvents()" class="button">Load Events</button> -->
 					</span>
 			    </div>
@@ -37,9 +49,17 @@
 			margin-top: -21px !important;
 		}
 		.cardhead{
-		    color: green!important;
-		    padding-bottom: 6px!important;
+		   /* color: rgb(50,55,59)!important;*/
+		    padding-bottom: 3px!important;
 		    padding-top: 6px!important;
+		    font-size: 15px!important;
+
+		}
+		.cardhead h2{
+			color: black!important;
+		}
+		.item-divider {
+		    background-color: #ffffff!important;
 		}
 		.bodyhgt {
 		    height: 81px!important;
@@ -49,6 +69,22 @@
 		    margin-bottom: -14px!important;
 		    margin-top: 16px!important;
 		}
+		.backgrnd{
+			background-color: rgb(221,221,221);
+		}
+		.monthview-selected {
+		    background-color: rgb(53,151,218)!important;
+		    color: #fff;
+		}
+		.imgclr{
+			width:45px;
+			float: center;
+		}
+		.fontcs{
+			font-weight: 200;
+			font-size: 17px;
+			padding-top: 11px;
+		}
     </style>
     <ion-content scroll="false" class="main-content" ng-init="init()">
 		<calendar ng-model="calendar.currentDate" calendar-mode="calendar.mode" event-source="calendar.eventSource"
@@ -56,26 +92,15 @@
 		  event-selected="onEventSelected(event)" title-changed="onViewTitleChanged(title)"
 		  time-selected="onTimeSelected(selectedTime, events, disabled)" step="30">
 	    </calendar>
-		<ion-list>
+		<ion-list >
 			<div class="">
 			    <a  menu-close ui-sref="AddEvent">
-					<img src="img/Add_Filled-100.png" style="float:right;margin-right: 0px;margin-right: 17px;margin-top: -66px;width: 55px;">
+					<img src="img/Plus .png" style="float:right;margin-right: 0px;margin-right: 7px;margin-top: -66px;width: 50px;">
 				</a>
 			</div>
 		</ion-list>	  
     </ion-content>
-    <!-- <div class="list card">
-	    <h2>Marty McFly</h2>
-	    <p>November 05, 1955</p>
-	  	<div class="item item-body">
-		    <p>
-		      <a href="#" class="subdued">1 Like</a>
-		      <a href="#" class="subdued">5 Comments</a>
-		    </p>
-	    </div>
-	</div>
-	  -->
-		
+    
 </ion-view>
 
  <!-- <div class="bar bar-footer" style=" height: 63px; border: solid white 0px 0px 0px 0px !important;padding: 0px 0px 0px 0px !important;">

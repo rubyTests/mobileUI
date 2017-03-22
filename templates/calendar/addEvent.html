@@ -56,31 +56,32 @@
     pointer-events: none;
     vertical-align: inherit;
 }*/
+.iconstyle{
+	margin-top: -10px;
+}
+.fontcs{
+	font-size:12px;
+	margin-left:5px;
+}
+.bordersty{
+	border-width: 1px 0 1px 11px;
+	padding-left: 1px;
+}
+.buttonhr {
+  background:none;
+  border:none;
+  color:#FFF;
+  font-family:Verdana, Geneva, sans-serif;
+  cursor:pointer;
+}
 </style>
-<!-- <div class="bar bar-header">
-		<button ng-click="$ionicGoBack()" class="button back-button buttons  button-clear header-item"><i class="icon ion-ios-arrow-back" style="color:;"></i> 
-			<span class="back-text"><span class="default-title"></span><span class="previous-title hide">February 2017</span></span>
-		</button>
-        <div class = "row">
-		<div class = "col">
-		<h1 class="title" style="margin-left: -153px;">Create Event</h1>
-		</div>
-		<div class = "col">
-			<h1 class="title" style="margin-left:147px!important;color:green;">Save</h1>
-		</div>
-		<div class = "col">
-			<h1 class="title" style=" text-align: right!important;color:red;">Cancel</h1>
-		</div>
-	</div>
-  
-</div> -->
     <ion-header-bar class="bar-stable">
 	    <div ng-click="goback();" class="IconDiv">
-		    <i class="ion ion-arrow-left-c back-icon headerICons" style="margin-top: 3px;"></i>
+		    <i class="ion ion-arrow-left-c back-icon headerICons" style="margin-top: 3px;margin-left: 4px;"></i>
 		</div>
 		<h1 class="title">Create Event</h1>
 		<div style="margin-left: 79%;">
-			<button type="button" ng-submit="saveEvent()" class="button btn-small button-primary" style="">Save</button>
+			<button type="button" class="buttonhr" style="">Save</button>
 		</div>
 
 		
@@ -92,28 +93,29 @@
 		<div class="list list-inset">
 		    <form  name="myForm"><p></p>
 			  <label class="item item-input">
-				<i class="icon ion-person" style="margin-left: 0px;"></i> &nbsp;&nbsp;
+				<i class="icon ion-person"></i> &nbsp;&nbsp;
 				<input class="font" type="text" placeholder="Title" ng-model="title">
 			  </label><br>
 			  <label class="item item-input">
-			  	<i class="icon ion-compose" style="margin-top: -10px;"></i> &nbsp;&nbsp;
+			  	<i class="icon ion-compose iconstyle" style="margin-top: -10px;"></i> &nbsp;&nbsp;
 				<textarea placeholder="Description"></textarea>
 			  </label>
-			<div class = "row item " style="border-width: 1px 0 0 11px;padding-left: 1px;">
+			<div class = "item bordersty">
 			
-				<div class = "item" ion-datetime-picker ng-model="datetimeValue" style="margin-bottom: -5px;">
-					<i class="icon ion-calendar" style="margin-top: -10px;"></i> &nbsp;&nbsp;
+				<div class = "item" ion-datetime-picker ng-model="datetimeValue" style="margin-bottom: -19px;">
+					<i class="icon ion-calendar"></i> &nbsp;&nbsp;
 					<span style="margin-left:-6px;">Start</span>
-					<strong style="font-size:12px;margin-left:5px;">{{datetimeValue| date: "yyyy-MM-dd"}} {{datetimeValue| date: "H:mm"}}</strong>
+					<strong class="fontcs">{{datetimeValue| date: "yyyy-MM-dd"}} {{datetimeValue| date: "H:mm"}}</strong>
 				</div>
 			</div>
-			<div class = "item" style="border-width: 1px 0 0 11px;padding-left: 1px;">
-				<div class = "item" ion-datetime-picker ng-model="datetimeValue1">
-					<i class="icon ion-calendar" style="margin-top: -10px;"></i> &nbsp;&nbsp;
+			<div class = "item bordersty">
+				<div class = "item" ion-datetime-picker ng-model="datetimeValue1" style="margin-bottom: -19px;">
+					<i class="icon ion-calendar"></i> &nbsp;&nbsp;
 					<span style="margin-left:-6px;">End</span>
-					<strong style="font-size:12px;margin-left:5px;">{{datetimeValue1| date: "yyyy-MM-dd"}} {{datetimeValue1| date: "H:mm"}}</strong>
+					<strong class="fontcs">{{datetimeValue1| date: "yyyy-MM-dd"}} {{datetimeValue1| date: "H:mm"}}</strong>
 				</div>
 			</div>
+			
           <!--   <label class="item item-input">
 				<div class = "row">
 					<div class = "col col-80">
