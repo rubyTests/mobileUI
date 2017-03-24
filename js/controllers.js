@@ -204,4 +204,34 @@ angular.module('starter.controllers', [])
       );
         return events;
       }
-    });
+    })
+.controller('AttndcCtrl', function($scope) {
+   var c3chart_donut_id = 'c3_chart_donut';
+
+            if ( $('#'+c3chart_donut_id).length ) {
+
+                var c3chart_donut = c3.generate({
+                    bindto: '#'+c3chart_donut_id,
+                    data: {
+                        columns: [
+                            ['data1', 30],
+                            ['data2', 120]
+                        ],
+                        type : 'donut',
+                    },
+                    donut: {
+                        title: "Percen",
+                        width: 40
+                        
+                    },
+                    interaction: {
+                        enabled: false
+                    },
+                    color: {
+                        pattern: ['#E67157', '#AA85BC']
+                    }
+                });
+
+            }
+
+});
