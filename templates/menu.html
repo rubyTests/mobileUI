@@ -1,94 +1,35 @@
-<!-- <ion-side-menus enable-menu-with-back-views="false" >
-  <ion-side-menu-content drag-content="false" edge-drag-threshold="false">
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button></ion-nav-back-button>
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content edge-drag-threshold="true">
+    <!-- <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
       <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon Togglebtn" drawer-toggle animate="false"></button>
+        <button class="button button-icon button-clear ion-navicon Togglebtn" menu-toggle="left">
+        </button>
       </ion-nav-buttons>
-    </ion-nav-bar>
-    <ion-tabs class="tabs-striped tabs-top tabs-custom tabs-background-stable tabs-color-dark" drawer-close>
-        <ion-tab  class="bg" title="MY AIRTEL"  href="#/app/hsa" >
-          <ion-nav-view name="tab-hsa"></ion-nav-view>
-        </ion-tab>
-        <ion-tab  class="bg" title="PAYMENT BANK"  href="#/app/fsa" >
-          <ion-nav-view name="tab-fsa"></ion-nav-view>
-        </ion-tab>
-    </ion-tabs>       
-  </ion-side-menu-content>
-  <drawer side="left" class="newsidemenusty">
-  <ion-side-menu side="left"  class="sideMenuWidth" >
-    <ion-header-bar class="bar-stable menuHeader">
-      <div class="col col-100 profileDiv">
-        <img ui-sref="Profile.about" src="http://tl-cologne.weebly.com/uploads/5/8/3/5/58354149/1534475_orig.png?180" class="menuHeaderProfileimg">
-        <p class="HeaderMenuProfileName">Me</p>
-        <p class="HeaderMenuProfileNo">9876543210</p>
-        <p class="menuHeaderBorder"></p>
-        <img class="headFooterDataImg" src="http://www.clker.com/cliparts/y/I/c/5/4/m/indian-rupee-white-md.png">
-        <p class="headFooterDataText1"><i class="fa fa-users"></i> 105 <span>
-        </span></p>
-        <p class="headFooterDataText2">Available  Balance</p>
-
+    </ion-nav-bar> -->
+    <ion-header-bar class="headerborder" >
+      <div class="IconDiv">
+        <button class="button button-icon button-clear ion-navicon Togglebtn" menu-toggle="left">
+        </button>
       </div>
-    </ion-header-bar>
-    <ion-content class="contentAdjust" drawer-close >
-      <ion-list>
-          <ion-item menu-close ui-sref="Profile"><i class="ion-person-add"></i><span class="menufont">Profile</span></ion-item>
-          <ion-item menu-close><i class="ion-person-add"></i><span class="menufont">Add Account</span></ion-item>
-          <ion-item menu-close><i class="ion-social-usd"></i><span class="menufont">Transaction History</span></ion-item>
-          <ion-item menu-close><i class="ion-ios-people"></i><span class="menufont">Family Share</span></ion-item>
-          <ion-item menu-close><i class="ion-android-star"></i><span class="menufont">Rate Us</span></ion-item>
-          <ion-item menu-close ui-sref="Settings"><i class="ion-gear-b"></i><span class="menufont">Settings</span></ion-item>
-          <ion-item menu-close><i class="ion-headphone"></i><span class="menufont">Help & Support</span></ion-item>
-          <ion-item menu-close ui-sref="FAQs"><i class="ion-ios-help"></i><span class="menufont">FAQs</span></ion-item>
-          <ion-item menu-close><i class="ion-android-share-alt"></i><span class="menufont">Share</span></ion-item>
-          <ion-item menu-close><i class="ion-android-notifications"></i><span class="menufont">Notification</span></ion-item>
-          <ion-item menu-close ui-sref="AboutUs"><i class="ion-document-text"></i><span class="menufont">Abount Us</span></ion-item>
-          <ion-item menu-close><i class="icon ion-earth"></i><span class="menufont">Open Network</span></ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-side-menu>
-    </drawer>
-
-</ion-side-menus> -->
-
-<ion-side-menus enable-menu-with-back-views="true" >
-  <ion-side-menu-content drag-content="true" edge-drag-threshold="true" >
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button></ion-nav-back-button>
-      <ion-nav-buttons side="left">
-        <button menu-toggle="left" class="button button-icon button-clear ion-navicon Togglebtn"></button>
-<!--         <button ng-click="toggleLeftSideMenu()">
-        Toggle Left Side Menu
-      </button> -->
-      </ion-nav-buttons>
-    </ion-nav-bar>
-    <ion-tabs class="tabs-striped tabs-top tabs-custom tabs-background-stable tabs-color-dark">
-        <ion-tab  class="bg" title="HOME"  href="#/app/hsa" >
-          <ion-nav-view name="tab-hsa"></ion-nav-view>
-        </ion-tab>
-        <ion-tab  class="bg" title="FEES PAYMENT"  href="#/app/fsa" >
-          <ion-nav-view name="tab-fsa"></ion-nav-view>
-        </ion-tab>
-    </ion-tabs>       
+      <div class="">
+        <h3  class="headertitle">Home</h3>
+      </div>
+    </ion-header-bar>   
+    <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
-  <!-- <drawer side="left" class="newsidemenusty"> -->
-<!--   <ion-side-menu side="left"  class="sideMenuWidth" expose-aside-when="large" > -->
-  <ion-side-menu side="left"  class="sideMenuWidth" >
+  <ion-side-menu side="left" class="">
     <ion-header-bar class="bar-stable menuHeader">
       <div class="col col-100 profileDiv">
         <img ui-sref="Profile.about" src="http://tl-cologne.weebly.com/uploads/5/8/3/5/58354149/1534475_orig.png?180" class="menuHeaderProfileimg">
         <p class="HeaderMenuProfileName">Ruby</p>
         <p class="HeaderMenuProfileNo">B.Tech Information Technology</p>
-        <!-- <p class="menuHeaderBorder"></p>
-        <img class="headFooterDataImg" src="http://www.clker.com/cliparts/y/I/c/5/4/m/indian-rupee-white-md.png">
-        <p class="headFooterDataText1"><i class="fa fa-users"></i> 105 <span>
-        </span></p>
-        <p class="headFooterDataText2">Available  Balance</p> -->
       </div>
     </ion-header-bar>
     <ion-content class="contentAdjust">
       <ion-list>
-          <ion-item menu-close ui-sref="Profile"><i class="ion-person-add"></i><span class="menufont">Profile</span></ion-item>
+          <ion-item menu-close ui-sref="Profile"><i class="ion-person-add"></i><span class="menufont">Profile </span></ion-item>
           <ion-item menu-close ui-sref="Calendar"><i class="ion-android-calendar"></i><span class="menufont">News & Events</span></ion-item>
           <ion-item menu-close><i class="ion-calendar"></i><span class="menufont">Attendance Details</span></ion-item>
           <ion-item menu-close><i class="ion-document-text"></i><span class="menufont">Exam Report</span></ion-item>
@@ -98,6 +39,4 @@
       </ion-list>
     </ion-content>
   </ion-side-menu>
-    <!-- </drawer> -->
-
 </ion-side-menus>
