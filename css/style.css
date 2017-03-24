@@ -126,7 +126,7 @@ a.item:hover, a.item:focus{
     color: white;
     font-family: Roboto-Regular !important;
     font-size: 18px;
-    margin-left: 13px;
+    margin-left: 10px;
     padding-top: 6px;
 }
 .Togglebtn{
