@@ -10,6 +10,35 @@
     	.item-icon-left {
 		    padding-left: 59px;
 		}
+		.bar .title {
+		    overflow: unset;
+		}
+		.bar-footer1 {
+		    background-position: center top;
+		    border-bottom-width: 0!important;
+		    border-top-width: 0;
+		    bottom: 0;
+		    height: 44px;
+		}
+		.bar {
+		    -moz-user-select: none;
+		    background-color: white;
+		    background-size: 0 auto;
+		    border-bottom: 0px solid #fff;
+		    border-style: solid;
+		    border-top: 0px solid transparent;
+		    border-width: 0px 0;
+		    box-sizing: border-box;
+		    display: flex;
+		    height: 44px;
+		    left: 0;
+		    padding: 5px;
+		    position: absolute;
+		    right: 0;
+		    transform: translate3d(0px, 0px, 0px);
+		    width: 100%;
+		    z-index: 9;
+		}
     </style>
     <ion-content scroll="false">
    
@@ -34,12 +63,15 @@
 		    <p style="white-space: normal;">Environment day is celebrated with a special message and theme to keep the environment clean and green.</p>
 		  </div>
 		</div>
-		<div class="">
+		
+    </ion-content>
+    <div class="bar bar-footer1" style="padding: 0px ! important; border-top-width: 0px!important;">
+    	<div class="title">
 			    <a  menu-close ui-sref="AddEventEdit">
-					<img src="img/Edit.png" style="float:right;margin-top:235px;width: 50px;margin-right: 9px;">
+					<img src="img/Edit.png" style="float:right;margin-top:-20px;width: 50px;">
 				</a>
 		</div>
-    </ion-content>
+    </div>
 
 		    
 	
