@@ -1,0 +1,94 @@
+<ion-view class="pageBackground">
+	<ion-view class="pageBackground">
+	<ion-header-bar class="headerborder" >
+	  <div class="IconDiv" ng-click="goback();">
+	    <i class="ion ion-arrow-left-c back-icon headerICons"></i>
+	  </div>
+	  <div class="">
+	    <h3  class="headertitle">Course</h3>
+	  </div>
+	</ion-header-bar>
+		<ion-content>
+		<style type="text/css">
+			.accord {margin-bottom: 0px !important;}
+		</style>
+			<div class="card">
+      <div class="list accord" ng-repeat="group in groups">
+      		<a class="item-stable item item-icon-left" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+      			<i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'" style="font-size: 20px"></i>
+      			 Group {{group.name}}
+      		</a>
+          <a class="item-accordion item" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
+            {{item}}
+          </a>
+          <a class="item" style="padding: 0px 0px"></a>
+        </div>
+      </div>
+			<div class="card">
+			  <div class="item item-divider">
+			    School of Mechanical Engineering
+			  </div>
+			  <div class="item item-text-wrap">
+			    <p>- Department of Mechanical Engineering</p>
+			    <p>- Department of Automobile Engineering</p>
+			    <p>- Department of Aerospace Engineering</p>
+			    <p>- Department of Mechatronics</p>
+			  </div>
+			</div>
+			<!-- <div class="card">
+			  <div class="item item-divider">
+			    School of Mechanical Engineering
+			  </div>
+			  <div class="item item-text-wrap">
+			    <p>- Department of Mechanical Engineering</p>
+			    <p>- Department of Automobile Engineering</p>
+			    <p>- Department of Aerospace Engineering</p>
+			    <p>- Department of Mechatronics</p>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="item item-divider">
+			    School of Electrical and Electronics Engineering
+			  </div>
+			  <div class="item item-text-wrap">
+				    <p>- Department of Electronics & Communication</p>
+				    <p>- Department of Telecommunication</p>
+				    <p>- Department of Electrical and Electronics</p>
+				    <p>- Department of Electronics & Instrumentation</p>
+				    <p>- Department of Instrumentation & Control Engg</p>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="item item-divider">
+			    School of Computing
+			  </div>
+			  <div class="item item-text-wrap">
+			    <p>- Department of Computer Science Engineering</p>
+					<p>- Department of Information Technology</p>
+					<p>- Department of Software Engineering</p>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="item item-divider">
+			    School of Bio - Engineering
+			  </div>
+			  <div class="item item-text-wrap">
+			    <p>- Department of Chemical Engineering</p>
+				  <p>- Department of Biotechnology</p>
+			    <p>- Department of Biomedical Engineering</p>
+			    <p>- Department of Genetic Engineering</p>
+			    <p>- Department of Food Process Engineering</p>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="item item-divider">
+			    School of Basic Sciences
+			  </div>
+			  <div class="item item-text-wrap">
+			  	<p>- Department of Mathematics</p>
+    			<p>- Department of Physics</p>
+    			<p>- Department of Chemistry</p>
+			  </div>
+			</div> -->
+	</ion-content>
+</ion-view>

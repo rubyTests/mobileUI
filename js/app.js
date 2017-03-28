@@ -4,17 +4,16 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer','tabSlideBox','ui.rCalendar','ion-datetime-picker'])
+angular.module('starter', ['ionic','starter.controllers','ui.rCalendar','ion-datetime-picker','ngCordova'])
 
 .run(function($ionicPlatform,$rootScope,$location,$state,$timeout,$interval) {
-    // .run(function($ionicPlatform) {
-
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
+
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
@@ -22,8 +21,6 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
     }
   });
 })
-// .controller('MainCtrl', function($scope, $window, $ionicSideMenuDelegate) {
-// })
 .config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider) {
   $ionicConfigProvider.tabs.position('bottom');
   $stateProvider
@@ -33,124 +30,110 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
-  // Side Menu Start//
-  .state('FAQs', {
-    url: "/FAQs",
-    templateUrl: "templates/FAQs.html",
-    controller: 'HsaCtrl'
+  .state('institute',{
+    url:'/institute',
+    templateUrl:'templates/institute/Home.html',
   })
-  .state('Settings', {
-    url: "/Settings",
-    templateUrl: "templates/Settings.html",
-    controller: 'HsaCtrl'
+  // .state('institute.Aboutus',{
+  //   url:'/Aboutus',
+  //   templateUrl:'templates/institute/Aboutus.html',
+  // })
+  // .state('institute.Course',{
+  //   url:'/Course',
+  //   templateUrl:'templates/institute/Course.html',
+  // })
+  // .state('institute.Career',{
+  //   url:'/Career',
+  //   templateUrl:'templates/institute/Career.html',
+  // })
+  // .state('institute.Admission',{
+  //   url:'/Admission',
+  //   templateUrl:'templates/institute/Admission.html',
+  // })
+  // .state('institute.Contactus',{
+  //   url:'/Contactus',
+  //   templateUrl:'templates/institute/Contactus.html',
+  // })
+  .state('Aboutus',{
+    url:'/Aboutus',
+    templateUrl:'templates/institute/Aboutus.html',
+    controller: 'CampusCtrl'
   })
-  .state('AboutUs', {
-    url: "/AboutUs",
-    templateUrl: "templates/Aboutus.html",
-    // templateUrl: "templates/student/tabside.html",
-    controller: 'HsaCtrl'
+  .state('Course',{
+    url:'/Course',
+    templateUrl:'templates/institute/Course.html',
+    controller: 'CampusCtrl'
   })
-  //profile//
-  // Side Menu End//
-  .state('app.hsa',{
-    url: "/hsa",
+  .state('Career',{
+    url:'/Career',
+    templateUrl:'templates/institute/Career.html',
+    controller: 'CampusCtrl'
+  })
+  .state('Admission',{
+    url:'/Admission',
+    templateUrl:'templates/institute/Admission.html',
+    controller: 'CampusCtrl'
+  })
+  .state('Contactus',{
+    url:'/Contactus',
+    templateUrl:'templates/institute/Contactus.html',
+    controller: 'CampusCtrl'
+  })
+  .state('app.Dashboard', {
+    url: '/Dashboard',
     views: {
-      'tab-hsa': {
-         templateUrl: "templates/dashboard.html",
-         controller: 'HsaCtrl'
+      'menuContent': {
+        templateUrl: 'templates/student/Dashboard.html'
       }
     }
   })
-  .state('app.fsa',{
-    url: "/fsa",
+  .state('app.Dashboard.studentDB',{
+    url: "/student-DashBoard",
     views: {
-      'tab-fsa': {
-        templateUrl: "templates/browse.html",
-         controller: 'FsaCtrl'
+      'tab-StudentDB': {
+         templateUrl: "templates/student/Home.html",
+         controller: 'CampusCtrl'
       }
     }
   })
-  .state('PayBill', {
-    url: "/PayBill",
-    templateUrl: "templates/payBill.html",
-    controller: 'HsaCtrl'
-  })
-  .state('Recharge', {
-    url: "/Recharge",
-    templateUrl: "templates/recharge.html",
-    controller: 'HsaCtrl'
-  })
-  .state('Payshop', {
-    url: "/Payshop",
-    templateUrl: "templates/payshop.html",
-    controller: 'HsaCtrl'
-  })
-  .state('Payshop.Person', {
-    url: "/Person",
+  .state('app.Dashboard.Payment',{
+    url: "/Payment-Detail",
     views: {
-      'Person-tab': {
-        templateUrl: "templates/payshop-person.html"
+      'tab-Payment': {
+        templateUrl: "templates/student/Payment.html",
+        controller: 'CampusCtrl'
       }
     }
   })
-  .state('Payshop.Bank', {
-    url: "/Bank",
-    views: {
-      'Bank-tab': {
-        templateUrl: "templates/payshop-bank.html"
-      }
-    }
-  })
-  .state('AddMoney', {
-    url: "/AddMoney",
-    templateUrl: "templates/addMoney.html",
-    controller: 'HsaCtrl'
-  })
-  // ruby campus start here profile //
   .state('Profile', {
     url: "/Profile",
     templateUrl: "templates/student/Profile.html",
-    controller: 'HsaCtrl'
-  })
-
-.state('Profile.Test',{
-    url: "/Test",
-    view:{
-      'test':{
-      templateUrl: "templates/student/test.html"
-      }
-    }
-  })
-  .state('profileNew',{
-    url:"/profile New",
-    templateUrl: "templates/student/profileNew.html",
-    controller:"HsaCtrl"
+    controller: 'CampusCtrl'
   })
   .state('Profile.about', {
     url: "/about",
     views: {
       'about': {
         templateUrl: "templates/student/about.html",
-        controller: 'HsaCtrl'
+        controller: 'CampusCtrl'
       }
     }
   })
   .state('Profile.Parents', {
-        url: '/parents',
-        views: {
-            'parents-details': {
-              templateUrl: 'templates/student/ParentDetail.html',
-              controller:'HsaCtrl'
-            }
-        }
+    url: '/parents',
+    views: {
+      'parents-details': {
+        templateUrl: 'templates/student/ParentDetail.html',
+        controller:'CampusCtrl'
+      }
+    }
     })
   .state('Profile.Parents.FatherDetails',{
     url:'/FatherDetails',
     views:{
       'Father-Details':{
         templateUrl :'templates/student/FatherDetails.html',
-        controller:'HsaCtrl'
+        controller:'CampusCtrl'
       }
     }
   })
@@ -159,7 +142,7 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
     views:{
       'Mother-Details':{
         templateUrl :'templates/student/MotherDetails.html',
-        controller:'HsaCtrl'
+        controller:'CampusCtrl'
       }
     }
   })
@@ -168,7 +151,7 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
     views:{
       'Gaurdian-Details':{
         templateUrl :'templates/student/GaurdianDetails.html',
-        controller:'HsaCtrl'
+        controller:'CampusCtrl'
       }
     }
   })
@@ -177,21 +160,20 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
     views :{
       'additiDetails':{
         templateUrl: "templates/student/AdditionalDetail.html",
-        controller: 'HsaCtrl'
+        controller: 'CampusCtrl'
       }
     }
   })
-
   // Gnanamani @21.03.2017 
   .state('Message', {
     url: "/Message",
     templateUrl: "templates/message/messageView.html",
-    controller: 'HsaCtrl'
+    controller: 'CampusCtrl'
   })
   .state('NewMessage',{
     url:'/NewMessage',
     templateUrl: "templates/message/newMessage.html",
-    controller: 'HsaCtrl'
+    controller: 'CampusCtrl'
   })
   .state('Calendar',{
     url:'/Calendar',
@@ -215,15 +197,13 @@ angular.module('starter', ['ionic', 'starter.controllers','ionic.contrib.drawer'
   })
   .state('AttdncPerctgView',{
     url:'/AttdncPerctgView',
-    templateUrl: "templates/attendance/attndncPerctgView.html",
-    controller: 'AttndcCtrl'
+    templateUrl: "templates/attendance/attdancPerctgView.html"
+    //controller: 'CalendarDemoCtrl'
   })
-  .state('AbsentView',{
-    url:'/AbsentView',
-    templateUrl: "templates/attendance/absentView.html",
-    controller: 'AppCtrl'
-  })
-  ;
-$urlRouterProvider.otherwise('/app/hsa');  
-
+  ; 
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('app/Dashboard');
+  ; 
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('institute');
 });

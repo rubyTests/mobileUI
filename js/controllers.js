@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('CampusCtrl', function($scope,$ionicTabsDelegate,$cordovaCamera,$cordovaDialogs) {
+.controller('CampusCtrl', function($scope,$filter,$ionicTabsDelegate,$cordovaCamera,$cordovaDialogs) {
   $scope.goForward = function () {
     var selected = $ionicTabsDelegate.selectedIndex();
     if (selected != -1) {
@@ -83,8 +83,7 @@ angular.module('starter.controllers', [])
      popoverOptions: CameraPopoverOptions,
      saveToPhotoAlbum: false,
      correctOrientation:true
-    };
-    
+    };    
     $cordovaCamera.getPicture(options).then(function(imageData) {
      $scope.imgSrc= imageData;
     }, function(err) {
@@ -110,8 +109,57 @@ angular.module('starter.controllers', [])
   //     $ionicTabsDelegate.select(selected - 1);
   //   }
   // }
-})
 
+  //accordians//
+  $scope.Courses=[
+  {couseId:1,courseName:'Mechanical Engineering'},
+  {couseId:2,courseName:'Electrical and Electronics Engineering'},
+  {couseId:3,courseName:'Computing Engineering'},
+  {couseId:4,courseName:'Bio - Engineering'},
+  {couseId:5,courseName:'Basic Sciences'}
+  ];
+  $scope.Department=[
+  {id:1,couseId:1,deptName:'Department of Mechanical Engineering'},
+  {id:2,couseId:1,deptName:'Department of Automobile Engineering'},
+  {id:3,couseId:1,deptName:'Department of Aerospace Engineering'},
+  {id:4,couseId:1,deptName:'Department of Mechatronics'}
+  ];
+  $scope.CourseGroup=[];
+  $scope.findCourse=function(id){
+    console.log(id,'id');
+    // $scope.Courses=$filter('filter')(couseId, 'id');
+    // console.log($scope.Courses)
+  }
+  angular.forEach($scope.Department,function(value){
+     console.log(value,'value');
+    $scope.CourseGroup.push({cName:$scope.findCourse(value.couseId),dName:value.deptName});
+  });
+  
+  $scope.groups = [];
+  for (var i=0; i<10; i++) {
+    $scope.groups[i] = { name: i, items: []};
+    // console.log($scope.groups[i],'$scope.groups[i]');
+    for (var j=0; j<3; j++) {
+      $scope.groups[i].items.push(i + '-' + j);
+    }
+  }
+  /*
+   * if given group is the selected group, deselect it
+   * else, select the given group
+   */
+  $scope.toggleGroup = function(group) {
+    // console.log(group,'group');
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    // console.log($scope.shownGroup === group,'isGroupShown');
+    return $scope.shownGroup === group;
+  };
+})
 // Gnanamani created @ 21.03.2017
 .controller('CalendarDemoCtrl', function ($scope) {
     'use strict';
