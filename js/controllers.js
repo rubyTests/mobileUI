@@ -54,6 +54,16 @@ angular.module('starter.controllers', [])
       $ionicTabsDelegate.select(selected - 1);
     }
   }
+  $scope.goback=function(){
+    window.history.back();
+    // window.location.href = "../www/index.html#/app/Dashboard";
+  }
+  $scope.goAbout=function(){
+    window.location.href = "../www/index.html#/Profile/about";
+  }
+  $scope.goAdditional=function(){
+   window.location.href = "../www/index.html#/Profile/AdditionalDetails";
+  }
   $scope.imgSrc="https://s-media-cache-ak0.pinimg.com/originals/57/43/47/574347ddf6be999e0027de121104f2ff.png";
   $scope.upload=function(){
     $cordovaDialogs.confirm('Choose your option', 'Upload Receipt', ['Camera','Gallery'])
@@ -92,16 +102,6 @@ angular.module('starter.controllers', [])
   });
   }
 
-  $scope.goback=function(){
-    // window.history.back();
-    window.location.href = "../www/index.html#/app/hsa";
-  }
-  $scope.goAbout=function(){
-    window.location.href = "../www/index.html#/Profile/about";
-  }
-  $scope.goAdditional=function(){
-   window.location.href = "../www/index.html#/Profile/AdditionalDetails";
-  }
   //  $scope.goBack = function () {
   //   //alert('fsa goback');
   //   var selected = $ionicTabsDelegate.selectedIndex();
@@ -111,44 +111,55 @@ angular.module('starter.controllers', [])
   // }
 
   //accordians//
-  $scope.Courses=[
-  {couseId:1,courseName:'Mechanical Engineering'},
-  {couseId:2,courseName:'Electrical and Electronics Engineering'},
-  {couseId:3,courseName:'Computing Engineering'},
-  {couseId:4,courseName:'Bio - Engineering'},
-  {couseId:5,courseName:'Basic Sciences'}
-  ];
-  $scope.Department=[
-  {id:1,couseId:1,deptName:'Department of Mechanical Engineering'},
-  {id:2,couseId:1,deptName:'Department of Automobile Engineering'},
-  {id:3,couseId:1,deptName:'Department of Aerospace Engineering'},
-  {id:4,couseId:1,deptName:'Department of Mechatronics'}
-  ];
-  $scope.CourseGroup=[];
-  $scope.findCourse=function(id){
-    console.log(id,'id');
-    // $scope.Courses=$filter('filter')(couseId, 'id');
-    // console.log($scope.Courses)
-  }
-  angular.forEach($scope.Department,function(value){
-     console.log(value,'value');
-    $scope.CourseGroup.push({cName:$scope.findCourse(value.couseId),dName:value.deptName});
-  });
-  
+  // $scope.Courses=[
+  // {couseId:1,courseName:'Mechanical Engineering'},
+  // {couseId:2,courseName:'Electrical and Electronics Engineering'},
+  // {couseId:3,courseName:'Computing Engineering'},
+  // {couseId:4,courseName:'Bio - Engineering'},
+  // {couseId:5,courseName:'Basic Sciences'}
+  // ];
+  // $scope.Department=[
+  // {id:1,couseId:1,deptName:'Department of Mechanical Engineering'},
+  // {id:2,couseId:1,deptName:'Department of Automobile Engineering'},
+  // {id:3,couseId:1,deptName:'Department of Aerospace Engineering'},
+  // {id:4,couseId:1,deptName:'Department of Mechatronics'}
+  // ];
+  // $scope.CourseGroup=[];
+  // $scope.findCourse=function(id){
+  //   console.log(id,'id');
+  //   // $scope.Courses=$filter('filter')($scope.Courses,{id :'a'});
+  //   // console.log($scope.Courses)
+  // }
   $scope.groups = [];
-  for (var i=0; i<10; i++) {
-    $scope.groups[i] = { name: i, items: []};
-    // console.log($scope.groups[i],'$scope.groups[i]');
-    for (var j=0; j<3; j++) {
-      $scope.groups[i].items.push(i + '-' + j);
-    }
-  }
+
+    $scope.groups = [
+    { Deptname: 'Mechanical Engineering',items: [{ courseName: 'Mechanical Engineering'},{courseName: 'Automobile Engineering'},{courseName:'Aerospace Engineering'},{courseName:'Mechatronics'}]},
+    { Deptname: 'Electrical and Electronics Engineering',items: [{ courseName: 'Electronics & Communication Engineering'},{ courseName: 'Telecommunication Engineering'},{ courseName: 'Electrical and Electronics Engineering'},{ courseName: 'Electronics & Instrumentation Engineering'},{courseName:'Instrumentation & Control Engineering'}]},
+    {Deptname: 'Computing Engineering',items: [{ courseName: 'Computer Science Engineering'},{ courseName: 'Information Technology'},{ courseName: 'Software Engineering'}]},
+    {Deptname: 'Basic Sciences',items: [{ courseName: 'Mathematics'},{ courseName: 'Physics'},{ courseName: 'Chemistry'}]},
+    {Deptname: 'Bio - Engineering',items: [{ courseName: 'Chemical Engineering'},{ courseName: 'Biotechnology'},{ courseName: 'Biomedical Engineering'},{courseName:'Genetic Engineering'},{courseName:'Food Process Engineering'}]}
+    ];
+
+    $scope.Career=[];
+    $scope.Career=[
+    {jobTitle:'Project Officer',workst:'Infotech',salary:'Rs. 20,000/- Rs. 40,000/'},
+    {jobTitle:'Junior Research Fellow',workst:'CTS',salary:'Rs. 35,000/- Rs. 70,000/'},
+    {jobTitle:'Junior Research Fellow',workst:'TCS, Vellore .',salary:'Rs. 40,000/- Rs. 80,000/'},
+    {jobTitle:'Asst Manager',workst:'wipro,',salary:'Rs. 40,000/- Rs. 80,000/'}
+    ];
+  // $scope.groups = [];
+  // for (var i=0; i<10; i++) {
+  //   $scope.groups[i] = { name: i, items: []};
+  //   // console.log($scope.groups[i],'$scope.groups[i]');
+  //   for (var j=0; j<3; j++) {
+  //     $scope.groups[i].items.push(i + '-' + j);
+  //   }
+  // }
   /*
    * if given group is the selected group, deselect it
    * else, select the given group
    */
   $scope.toggleGroup = function(group) {
-    // console.log(group,'group');
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
     } else {

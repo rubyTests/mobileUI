@@ -119,15 +119,26 @@ a.item:hover, a.item:focus{
 }
 .IconDiv{
   cursor: pointer !important;
-  margin-left: 6px;
-  width: 23px;
+  width : 23px;
+  height: 30px;
+  bottom: 2px; padding-top: 2px; border-bottom-width: 0px; margin-top: 2px; margin-bottom: 0px; margin-left: 4px;
 }
 .headertitle {
-    color: white;
+    /*color: white;
     font-family: Roboto-Regular !important;
     font-size: 18px;
     margin-left: 10px;
-    padding-top: 6px;
+    padding-top: 4px;*/
+    color: white;
+    font-family: Roboto-Regular !important;
+    font-size: 18px;
+    padding-bottom: 6px;
+    padding-top: 6px; 
+    margin-top: 2px; 
+    margin-bottom: 0px; 
+    height: 38px; 
+    /*width: 54px;*/
+    margin-left: 10px;
 }
 .Togglebtn{
 	color: white!important;
@@ -262,9 +273,9 @@ border-top: 1px solid #f5f5f5 ;
 .CardfooterText{
 	float: right;
   font-size: 13px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/margin-bottom: 8px;
   margin-right: 14px !important;
-  margin-top: 10px;
+  /*margin-top: 10px;*/margin-top: 8px;
 }
 
 .QucikCartHeader{

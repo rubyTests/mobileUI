@@ -1,4 +1,3 @@
-<ion-view class="pageBackground">
 	<ion-view class="pageBackground">
 	<ion-header-bar class="headerborder" >
 	  <div class="IconDiv" ng-click="goback();">
@@ -8,42 +7,30 @@
 	    <h3  class="headertitle">Admission</h3>
 	  </div>
 	</ion-header-bar>
-	<ion-content>		
-		<!-- <div class="card">
-		  <div class="item item-divider">
-		    School of Mechanical Engineering
-		  </div>
-		  <div class="item item-text-wrap">
-		    <p>- Department of Mechanical Engineering</p>
-		  </div>
-		</div> -->
+	<ion-content>
+		<style type="text/css">
+			.accord {margin-bottom: 0px !important;}
+			.list.accord:last-child{
+				margin-bottom: -1px !important;
+			}
+		</style>
 		<div class="card">
-	    <div href="#" class="item item-avatar newavatar">
-	      <img src="img/icons/Event Accepted Filled-100.png" class="Cardimage">
-	      <p class="Card-icon-Title" style="padding-top: 10px;font-size: 15px !important">Undergraduate Admissions</p>
-	    </div>
-	    <p class="CardfooterText"><a class="anchorTag1" ui-sref="Course">MORE</a></p>
-		</div>
-		<div class="card">
-	    <div href="#" class="item item-avatar newavatar">
-	      <img src="img/icons/Event Accepted Filled-100.png" class="Cardimage">
-	      <p class="Card-icon-Title" style="padding-top: 10px;font-size: 15px !important">Postgraduate Admissions</p>
-	    </div>
-	    <p class="CardfooterText"><a class="anchorTag1" ui-sref="Course">MORE</a></p>
-		</div>
-		<div class="card">
-	    <div href="#" class="item item-avatar newavatar">
-	      <img src="img/icons/Event Accepted Filled-100.png" class="Cardimage">
-	      <p class="Card-icon-Title" style="padding-top: 10px;font-size: 15px !important">Reasearch Admissions</p>
-	    </div>
-	    <p class="CardfooterText"><a class="anchorTag1" ui-sref="Course">MORE</a></p>
-		</div>
-		<div class="card">
-	    <div href="#" class="item item-avatar newavatar">
-	      <img src="img/icons/Event Accepted Filled-100.png" class="Cardimage">
-	      <p class="Card-icon-Title" style="padding-top: 10px;font-size: 15px !important">International/NRI Admissions</p>
-	    </div>
-	    <p class="CardfooterText"><a class="anchorTag1" ui-sref="Course">MORE</a></p>
-		</div>
+      	<div class="list accord item-text-wrap" ng-repeat="group in groups">
+      		<a class="item-stable item item-icon-right" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+      			<i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'" style="font-size: 20px"></i>
+      			 {{group.Deptname}}
+      		</a>
+          <a class="item-accordion item" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
+            <p>{{item.courseName}}</p>
+          </a>
+          <!-- <div>
+            <span>{{item.courseName}}</span>
+            <span style="float: right;">
+            <input type="button" class="button button-small button-balanced" value="Apply">
+            </span>
+          </div> -->
+          <a class="item" style="padding: 0px 0px"></a>
+        </div>
+      </div>
 	</ion-content>
 </ion-view>

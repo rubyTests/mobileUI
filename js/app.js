@@ -6,10 +6,48 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic','starter.controllers','ui.rCalendar','ion-datetime-picker','ngCordova'])
 
-.run(function($ionicPlatform,$rootScope,$location,$state,$timeout,$interval) {
+.run(function($ionicPlatform,$rootScope,$location,$state,$timeout,$interval,$ionicPopup,$ionicHistory) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
+  //   $ionicPlatform.onHardwareBackButton(function () {
+  //     if(true) { // your check here
+  //         $ionicPopup.confirm({
+  //           title: 'System warning',
+  //           template: 'are you sure you want to exit?'
+  //         }).then(function(res){
+  //           if( res ){
+  //             navigator.app.exitApp();
+  //           }
+  //         })
+  //     }
+  // });
+  // $ionicPlatform.registerBackButtonAction(function(e){
+  //   if ($rootScope.backButtonPressedOnceToExit) {
+  //     ionic.Platform.exitApp();
+  //   }
+  //   else if ($ionicHistory.backView()) {
+  //     $ionicHistory.goBack();
+  //   }
+  //   else {
+  //     $rootScope.backButtonPressedOnceToExit = true;
+  //     window.plugins.toast.showShortCenter(
+  //       "Press back button again to exit",function(a){},function(b){}
+  //     );
+  //     setTimeout(function(){
+  //       $rootScope.backButtonPressedOnceToExit = false;
+  //     },2000);
+  //   }
+  //   e.preventDefault();
+  //   return false;
+  // },101);
+
+    $ionicPlatform.onHardwareBackButton(function() {
+         //alert('going back now ');
+         window.history.back();
+      });
+
+
     if (window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);

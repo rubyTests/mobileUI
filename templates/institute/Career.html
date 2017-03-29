@@ -9,78 +9,55 @@
 	  </div>
 	</ion-header-bar>
 	<ion-content>
-	<style type="text/css">
-		.compName{padding-top: 9px}
-	</style>		
+			<style type="text/css">
+			.accord {margin-bottom: 0px !important;}
+			.item-header{margin-bottom: 0px}
+			.list.accord:last-child{
+				margin-bottom: -1px !important;
+			}
+		</style>
+	<img src="http://empressaa.com/images/career_banner.jpg" style="width: 100%;min-height: 120px">
 	<div class="card">
-      <div class="list">
-        <div class="item item-wrap item-text-wrap">
-          <h2 class="compName">Dream Companies</h2>
-        </div>
-        <span href="#" class="item item-avatar item-text-wrap">
-          <img src="img/icons/Address.png">
-          <h2 class="compName">Microsoft</h2>
-        </span>
-        <span href="#" class="item item-avatar item-text-wrap">
-          <img src="img/icons/Phone.png">
-          <h2 class="compName">Paypal</h2>
-        </span>
-        <span href="#" class="item item-avatar item-text-wrap">
-          <img src="img/icons/Email.png">
-          <h2 class="compName">Zomato</h2>
-        </span>
-        <span href="#" class="item item-avatar item-text-wrap">
-          <img src="img/icons/Email.png">
-          <h2 class="compName">Payu</h2>
-        </span>
-        <span href="#" class="item item-avatar item-text-wrap">
-          <img src="img/icons/Email.png">
-          <h2 class="compName">Honeywell</h2>
-        </span>
-        <span href="#" class="item item-avatar item-text-wrap">
-          <img src="img/icons/Email.png">
-          <h2 class="compName">Flipkart</h2>
-        </span>
-        <span href="#" class="item item-avatar item-text-wrap">
-          <img src="img/icons/Email.png">
-          <h2 class="compName">Snapdeal</h2>
-        </span>
-        <span href="#" class="item item-avatar item-text-wrap">
-          <img src="img/icons/Email.png">
-          <h2 class="compName">Myntra</h2>
-        </span>
-      </div>
+		<div class="item item-divider">Career</div>
+    <div class="item item-text-wrap">
+      <p>In our work environment, all employees are valued and respected and have opportunities to develop their full potential and pursue a career path of their choice. Our human resource policies and practices are geared towards attracting and recruiting the best, rewarding, recognising and retaining them. These policies and practices are comparable to some of the best in the industry. <p>
     </div>
-    <div class="card">
-	  <div class="item item-divider">
-	    Placement Records
-	  </div>
-	  <div class="item item-text-wrap">
-	    <p>Ruby Campus has been consistently been setting records and breaking them over the past several years. The latest was with close to 8000 job offers made to our students by Accenture, Wipro, TCS and Infosys.</p>
-	    <p></p>
-	    <p>
-            <strong>Here’s a quick glimpse of our top IT recruiters over the years</strong><br>
-            2012-13<br>
-             -Accenture(1492), Cognizant(803) and Wipro(1308)<br>
-            2013-14<br>
-            -Accenture(1688), Cognizant(1084) and Wipro(1162)<br>
-            2014-15<br>
-            -Accenture(1324), Cognizant(1911), Infosys(1452) &amp; Wipro(1141)
-        </p>
-        <p></p>
-        <p>
-          <strong>VIT has entered into Limca Book of Records thrice for the highest number of campus placements done from a single Institution by a single company:</strong>
-          <br>
-          </p>
-          <p></p>
-          <ul>
-            <li><i class="mdi-image-navigate-next"></i>2009 (TCS-1075)</li>
-            <li><i class="mdi-image-navigate-next"></i>2011 (Cognizant-1643)</li>
-            <li><i class="mdi-image-navigate-next"></i>2012 (Cognizant-1820)</li>
-          </ul>
-	  </div>
 	</div>
-      </div>
-    </div>
+	<div class="card">
+			<div class="item item-divider item-header">Job Vacancies</div>
+				<div class="list accord" ng-repeat="group in Career">
+      		<a class="item-stable item-text-wrap item item-icon-right" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+      			<i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'" style="font-size: 20px"></i>
+      			 {{group.jobTitle}}
+      		</a>
+          <div class="item item-text-wrap"  ng-show="isGroupShown(group)">
+          	<p><b>Work Station :</b> {{group.workst}}, </p>
+          	<p><b>Salary :  </b> {{group.salary}},</p>
+          	<p><b>Job Summary :</b></p>
+            <p>The Project Officer will be responsible for overseeing field work in the impact communities. He will be responsible for assuring the high quality of project adhering to save the policies and procedures. This person will be responsible for maintaining collaborative working relationships with all parties involved in the implementation including local authorities, parents, children and community leaders and ensure coordination of project’s interventions in partnership with all program stakeholders.</p>
+            <br>
+            <p><b> Key Responsibilities: </b></p>
+            <p> > work closely with regional and community municipalities, local stakeholders to mobilize resources, coordinate activities and ensure active participation of beneficiaries, local authorities and stakeholders;</p>
+            <p> > Organize project activities in target communities, negotiate with service providers and ensure timely and quality provision of services.</p>
+            <p> > Organize community events and trainings and capacity building activities. Conduct community meetings, develop action plans and work with the action groups formed throughout the project; </p>
+            <p> > Develop schedules for project implementation, including the breakdown of activities by weeks. When necessary ensure timely provision of qualified technical expertise;  </p>
+            <p> > Assist the Advocacy, Communication and Media Coordinator in preparation of press releases and other information materials. </p>
+            <p> > Provide evidence from the field and ensure good coverage of the program activities .</p>
+            <br>
+            <p><b>Requirements / Qualifications:</b></p>
+            <p> > Master of Social Work (MSW) degree from a recognized institution or related field</p>
+            <p> > Proven record of at least 5-year working experience in the area of community development and mobilization in the country; </p>
+            <p> > Successful candidate should have field experience including resource mobilization and management of community development; </p>
+            <p> > Excellent organizational skills; ability to effectively plan operations and manage tight budgets; high level of maturity, responsibility and accountability; sound judgment and attention to details; </p>
+            <p> > Excellent interpersonal skills, including patience, diplomacy, willingness to listen and respect for stakeholders; capability of creating strong partnerships between all program stakeholders;</p>
+            <p>Ability to work effectively in a fast-paced, stressful environment; flexible and willing person to work irregular hours;
+						Fluency in written and spoken English language is a plus; excellent computer skills in MS Word and Excel. </p>
+						<p></p>
+						<p>Eligible candidates are requested to send their updated CV by mentioning the Designation in the subject line to hr@vit.ac.in on or before 21.04.2017.</p>
+          </div>
+          <a class="item" style="padding: 0px 0px"></a>
+        </div>
+	</div>
+	 <br>
 	</ion-content>
 </ion-view>
