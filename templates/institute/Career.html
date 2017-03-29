@@ -1,21 +1,14 @@
 <ion-view class="pageBackground">
 	<ion-view class="pageBackground">
-	<ion-header-bar class="headerborder" >
+		<ion-header-bar class="headerborder" >
 	  <div class="IconDiv" ng-click="goback();">
 	    <i class="ion ion-arrow-left-c back-icon headerICons"></i>
 	  </div>
-	  <div class="">
-	    <h3  class="headertitle">Career</h3>
+	  <div>
+	    <h4  class="headertitle">Career</h4>
 	  </div>
 	</ion-header-bar>
 	<ion-content>
-			<style type="text/css">
-			.accord {margin-bottom: 0px !important;}
-			.item-header{margin-bottom: 0px}
-			.list.accord:last-child{
-				margin-bottom: -1px !important;
-			}
-		</style>
 	<img src="http://empressaa.com/images/career_banner.jpg" style="width: 100%;min-height: 120px">
 	<div class="card">
 		<div class="item item-divider">Career</div>
@@ -27,7 +20,7 @@
 			<div class="item item-divider item-header">Job Vacancies</div>
 				<div class="list accord" ng-repeat="group in Career">
       		<a class="item-stable item-text-wrap item item-icon-right" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
-      			<i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'" style="font-size: 20px"></i>
+      			<i class="icon accordianICon" ng-class="isGroupShown(group) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'"></i>
       			 {{group.jobTitle}}
       		</a>
           <div class="item item-text-wrap"  ng-show="isGroupShown(group)">
@@ -55,7 +48,7 @@
 						<p></p>
 						<p>Eligible candidates are requested to send their updated CV by mentioning the Designation in the subject line to hr@vit.ac.in on or before 21.04.2017.</p>
           </div>
-          <a class="item" style="padding: 0px 0px"></a>
+          <a class="item bottomborderOverlap"></a>
         </div>
 	</div>
 	 <br>

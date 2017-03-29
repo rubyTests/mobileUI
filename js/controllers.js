@@ -58,6 +58,9 @@ angular.module('starter.controllers', [])
     window.history.back();
     // window.location.href = "../www/index.html#/app/Dashboard";
   }
+  $scope.goHome=function(){
+   window.location.href = "../www/index.html#/app/Dashboard"; 
+  }
   $scope.goAbout=function(){
     window.location.href = "../www/index.html#/Profile/about";
   }

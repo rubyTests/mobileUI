@@ -1,35 +1,23 @@
 	<ion-view class="pageBackground">
-	<ion-header-bar class="headerborder" >
+		<ion-header-bar class="headerborder" >
 	  <div class="IconDiv" ng-click="goback();">
 	    <i class="ion ion-arrow-left-c back-icon headerICons"></i>
 	  </div>
-	  <div class="">
-	    <h3  class="headertitle">Admission</h3>
+	  <div>
+	    <h4 class="headertitle">Admission</h4>
 	  </div>
 	</ion-header-bar>
 	<ion-content>
-		<style type="text/css">
-			.accord {margin-bottom: 0px !important;}
-			.list.accord:last-child{
-				margin-bottom: -1px !important;
-			}
-		</style>
 		<div class="card">
       	<div class="list accord item-text-wrap" ng-repeat="group in groups">
       		<a class="item-stable item item-icon-right" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
-      			<i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'" style="font-size: 20px"></i>
+      			<i class="icon accordianICon" ng-class="isGroupShown(group) ? 'ion-ios-minus-outline' : 'ion-ios-plus-outline'"></i>
       			 {{group.Deptname}}
       		</a>
           <a class="item-accordion item" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
             <p>{{item.courseName}}</p>
           </a>
-          <!-- <div>
-            <span>{{item.courseName}}</span>
-            <span style="float: right;">
-            <input type="button" class="button button-small button-balanced" value="Apply">
-            </span>
-          </div> -->
-          <a class="item" style="padding: 0px 0px"></a>
+          <a class="item bottomborderOverlap"></a>
         </div>
       </div>
 	</ion-content>

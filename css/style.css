@@ -113,32 +113,36 @@ a.item:hover, a.item:focus{
 }
 .headerborder{
   background-color: #DE0124 !important;
+  /*border: 1px solid #DE0124;*/
 }
 .headerICons{
-  font-size: 27px;color: white;
+  /*font-size: 27px;*/
+  color: white;
+  margin: 2px 4px;
 }
 .IconDiv{
-  cursor: pointer !important;
+  width: 26px;
+  font-size: 27px;
+  /*cursor: pointer !important;
   width : 23px;
   height: 30px;
-  bottom: 2px; padding-top: 2px; border-bottom-width: 0px; margin-top: 2px; margin-bottom: 0px; margin-left: 4px;
+  bottom: 2px; padding-top: 2px; 
+  border-bottom-width: 0px;
+  margin-top: 2px;
+  margin-bottom: 0px; 
+  margin-left: 4px;*/
 }
 .headertitle {
-    /*color: white;
-    font-family: Roboto-Regular !important;
-    font-size: 18px;
-    margin-left: 10px;
-    padding-top: 4px;*/
     color: white;
     font-family: Roboto-Regular !important;
-    font-size: 18px;
-    padding-bottom: 6px;
-    padding-top: 6px; 
+    margin: 6px 4px;
+    /*font-size: 18px;*/
+/*    padding-bottom: 6px;
+    padding-top: 7px; 
     margin-top: 2px; 
     margin-bottom: 0px; 
-    height: 38px; 
-    /*width: 54px;*/
-    margin-left: 10px;
+    height: 38px;
+    margin-left: 10px;*/
 }
 .Togglebtn{
 	color: white!important;
@@ -501,4 +505,21 @@ border-top: 1px solid #f5f5f5 ;
 }
 .instContent{
   min-height: 57px;
+}
+
+/*//accordian styles//*/
+.accord {
+  margin-bottom: 0px !important;
+}
+.list.accord:last-child{
+margin-bottom: -1px !important;
+}
+.accordianICon{
+  font-size: 20px;
+}
+.bottomborderOverlap{
+  padding: 0px 0px;
+}
+.item-header{
+  margin-bottom: 0px
 }
